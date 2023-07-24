@@ -29,7 +29,6 @@ function Profile() {
     email: auth.currentUser.email,
   });
 
-
   const [deleteIcon, setDeleteIcon] = useState(false);
   const { name, email } = formData;
 
@@ -48,25 +47,25 @@ function Profile() {
         });
 
         toast.success("Woof! Details Updated", {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
         });
       } else {
         toast.error("Couldn't update details", {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
         });
       }
     } catch (error) {
@@ -216,7 +215,7 @@ function Profile() {
                     id={dog.id}
                     key={dog.id}
                     deleteIcon={deleteIcon}
-                  onDelete={() => onDelete(dog.id)}
+                    onDelete={() => onDelete(dog.id)}
                   />
                 );
               })}
