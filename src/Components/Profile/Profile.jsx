@@ -89,7 +89,16 @@ function Profile() {
       await deleteDoc(doc(db, "dogs", dogId));
       const updatedDogs = dogs.filter((dog) => dog.id !== dogId);
       setDogs(updatedDogs);
-      toast.success("Dog deleted");
+      toast.success("Dog deleted", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
   };
 
@@ -207,25 +216,7 @@ function Profile() {
                     id={dog.id}
                     key={dog.id}
                     deleteIcon={deleteIcon}
-                    onDelete={() =>
-                      onDelete(
-                        <main>
-                          <div className="cards-container">
-                            {dogs.map((dog) => {
-                              return (
-                                <Dogitem
-                                  dog={dog.data}
-                                  id={dog.id}
-                                  key={dog.id}
-                                  deleteIcon={deleteIcon}
-                                  onDelete={() => onDelete(dog.id)}
-                                />
-                              );
-                            })}
-                          </div>
-                        </main>
-                      )
-                    }
+                  onDelete={() => onDelete(dog.id)}
                   />
                 );
               })}
