@@ -1,16 +1,16 @@
 import Dogitem from "../DogItem/Dogitem";
 import Spinner from "../Spinner/Spinner";
-import "./DogsCards.css"
+
 
 function DogsCards({ dogs, loading, deleteIcon, onDelete }) {
   return (
-    <div className="dogs-cards " >
+    <div className="" >
       {loading ? (
         <Spinner />
       ) : dogs && dogs.length > 0 ? (
         <>
           <main>
-            <div className="cards-container">
+          <div class="flex justify-center justify-evenly flex-wrap gap-4" >
               {dogs.map((dog) => {
                 return (
                   <Dogitem

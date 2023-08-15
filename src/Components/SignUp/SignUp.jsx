@@ -8,7 +8,7 @@ import {
 import { db } from "../../firebase.config";
 import { setDoc, doc, serverTimestamp } from "firebase/firestore";
 import { toast } from "react-toastify";
-import "./SignUp.css"
+// import "./SignUp.css"
 
 function SignUp() {
   const navigate = useNavigate();

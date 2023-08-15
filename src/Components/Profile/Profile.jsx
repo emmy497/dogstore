@@ -1,4 +1,4 @@
-import "./Profile.css";
+// import "./Profile.css";
 import { getAuth, updateProfile } from "firebase/auth";
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
@@ -103,7 +103,7 @@ function Profile() {
 
   const profileDisplayName = name ? (
     changeDetails ? null : (
-      <p className=" ">Hello, {name}</p>
+      <p className="">Hello, {name}</p>
     )
   ) : null;
 
@@ -167,10 +167,10 @@ function Profile() {
             </div>
           ) : null}
 
-          <div className="edit-buttons mt-4 mb-3">
+          <div className="flex gap-4 mb-4 mt-4">
             {/* Change details button */}
             <button
-              className="btn btn-accent ml-5  mx-3"
+              className="btn bg-neutral-950 text-white "
               onClick={() => {
                 changeDetails && onSubmit();
                 setChangeDetails((prevState) => !prevState);
@@ -192,11 +192,11 @@ function Profile() {
             ) : null}
           </div>
 
-          <div className="sell-and-signOut-buttons ">
-            <NavLink to="/sell-dog" className="btn btn-neutral mx-3">
+          <div className="flex jusify-evenly gap-4 sell-and-signOut-buttons ">
+            <NavLink to="/sell-dog" className="btn bg-neutral-950 text-white ">
               Sell a Dog
             </NavLink>
-            <NavLink className="btn btn-neutral mx-3 " to="/sign-out">
+            <NavLink className="btn bg-neutral-950 text-white" to="/sign-out">
               Sign Out
             </NavLink>
           </div>
@@ -204,10 +204,10 @@ function Profile() {
       </div>
 
       {!loading && dogs?.length > 0 && (
-        <div className="user-dogs">
-          <h6 className="text-center text-dark">Your dogs</h6>
+        <div className="user-dogs mt-4 ">
+          <h6 className="text-center text-dark text-bold">Your dogs</h6>
           <main>
-            <div className="cards-container">
+            <div className="flex justify-center justify-evenly flex-wrap gap-4">
               {dogs.map((dog) => {
                 return (
                   <Dogitem

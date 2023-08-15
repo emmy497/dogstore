@@ -9,7 +9,7 @@ import {
 } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
-import "./SellDog.css";
+// import "./SellDog.css";
 import Spinner from "../Spinner/Spinner";
 import { toast } from "react-toastify";
 import { db } from "../../firebase.config";

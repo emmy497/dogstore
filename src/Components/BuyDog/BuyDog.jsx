@@ -1,5 +1,5 @@
 import React from "react";
-import "./BuyDog.css";
+// import "./BuyDog.css";
 
 import {
   collection,
@@ -54,17 +54,9 @@ function BuyDog() {
     <>
       <Navbar />
 
-      <div className="home-container">
-        <div className="header-container">
-          <Header />
-        </div>
+      <Header />
 
-        <div className="dogs-cards-container">
-        <DogsCards dogs={dogs} loading={loading} />
-        </div>
-        
-       
-      </div>
+      <DogsCards dogs={dogs} loading={loading} />
     </>
   );
 }
