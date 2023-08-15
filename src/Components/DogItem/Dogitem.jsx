@@ -11,7 +11,7 @@ function Dogitem({ dog, id, deleteIcon, onDelete }) {
           <h2 className="card-title">{dog.name}</h2>
           <p>{dog.breed}</p>
           <div className="card-actions">
-            <button className="btn bg-neutral-950 text-white">
+            <button className="btn bg-neutral-950 hover:bg-neutral-950 md:bg-neutral-500 text-white">
               $ {dog.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </button>
             {deleteIcon ? (

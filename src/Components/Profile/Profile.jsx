@@ -170,7 +170,7 @@ function Profile() {
           <div className="flex gap-4 mb-4 mt-4">
             {/* Change details button */}
             <button
-              className="btn bg-neutral-950 text-white "
+              className="btn bg-neutral-950 hover:bg-neutral-950 md:bg-neutral-500 text-white"
               onClick={() => {
                 changeDetails && onSubmit();
                 setChangeDetails((prevState) => !prevState);
@@ -193,10 +193,16 @@ function Profile() {
           </div>
 
           <div className="flex jusify-evenly gap-4 sell-and-signOut-buttons ">
-            <NavLink to="/sell-dog" className="btn bg-neutral-950 text-white ">
+            <NavLink
+              to="/sell-dog"
+              className="btn bg-neutral-950 hover:bg-neutral-950 md:bg-neutral-500 text-white "
+            >
               Sell a Dog
             </NavLink>
-            <NavLink className="btn bg-neutral-950 text-white" to="/sign-out">
+            <NavLink
+              className="btn bg-neutral-950 hover:bg-neutral-950 md:bg-neutral-500 text-white"
+              to="/sign-out"
+            >
               Sign Out
             </NavLink>
           </div>
